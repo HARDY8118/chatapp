@@ -1,0 +1,29 @@
+{% extends "base.djt" %}
+{% load static %}
+
+{% block title_block %}
+    <title>
+        SIGNUP
+    </title>
+{% endblock title_block %}
+
+{% block staticfiles %}
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+{% endblock staticfiles %}
+
+{% block form_body %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group"> 
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+        {% endfor %}
+       <input type="submit" value="Go">
+    </form>
+</div>
+
+{% endblock form_body %}

@@ -1,0 +1,31 @@
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 2px #00000050;
+  padding: 3em 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-group label{
+  font-size: 1.5em;
+  padding-right: 1em;
+}
+
+input.form-control {
+  width: 50%;
+  display: inline;
+}
